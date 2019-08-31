@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM", "MVVM\MVVM.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{5C5A8F77-D2A7-41FB-97A1-C7F07FB094FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Converters", "Converters\Converters.csproj", "{A8E9EF53-0E3F-4422-AC8F-ACC6FDDCC414}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{5C5A8F77-D2A7-41FB-97A1-C7F07FB094FD}.Release|x64.Build.0 = Release|Any CPU
 		{5C5A8F77-D2A7-41FB-97A1-C7F07FB094FD}.Release|x86.ActiveCfg = Release|Any CPU
 		{5C5A8F77-D2A7-41FB-97A1-C7F07FB094FD}.Release|x86.Build.0 = Release|Any CPU
+		{A8E9EF53-0E3F-4422-AC8F-ACC6FDDCC414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8E9EF53-0E3F-4422-AC8F-ACC6FDDCC414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8E9EF53-0E3F-4422-AC8F-ACC6FDDCC414}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A8E9EF53-0E3F-4422-AC8F-ACC6FDDCC414}.Debug|x64.Build.0 = Debug|Any CPU
+		{A8E9EF53-0E3F-4422-AC8F-ACC6FDDCC414}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A8E9EF53-0E3F-4422-AC8F-ACC6FDDCC414}.Debug|x86.Build.0 = Debug|Any CPU
+		{A8E9EF53-0E3F-4422-AC8F-ACC6FDDCC414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8E9EF53-0E3F-4422-AC8F-ACC6FDDCC414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8E9EF53-0E3F-4422-AC8F-ACC6FDDCC414}.Release|x64.ActiveCfg = Release|Any CPU
+		{A8E9EF53-0E3F-4422-AC8F-ACC6FDDCC414}.Release|x64.Build.0 = Release|Any CPU
+		{A8E9EF53-0E3F-4422-AC8F-ACC6FDDCC414}.Release|x86.ActiveCfg = Release|Any CPU
+		{A8E9EF53-0E3F-4422-AC8F-ACC6FDDCC414}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

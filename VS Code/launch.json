@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run & Debug",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceRoot}\\<exe-path>",
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "stopAtEntry": false,
+            "console": "externalTerminal",
+            "logging": {
+                "moduleLoad": false
+            }
+        },
+        {
+            "name": "Build & Debug",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceRoot}\\<exe-path>",
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "stopAtEntry": false,
+            "console": "externalTerminal",
+            "logging": {
+                "moduleLoad": false
+            },
+            "preLaunchTask": "build"
+        }
+    ]
+}

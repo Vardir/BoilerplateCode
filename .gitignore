@@ -4,7 +4,11 @@
 .vs/
 
 #Projects
-MVVM/obj/
 MVVM/bin/
-Helpers/obj/
+MVVM/obj/
+
 Helpers/bin/
+Helpers/obj/
+
+Converters/bin/
+Converters/obj/
