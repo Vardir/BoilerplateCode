@@ -1,0 +1,10 @@
+
+#Editors special folders
+.vscode/
+.vs/
+
+#Projects
+MVVM/obj/
+MVVM/bin/
+Helpers/obj/
+Helpers/bin/
