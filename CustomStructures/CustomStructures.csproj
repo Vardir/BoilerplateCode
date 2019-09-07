@@ -1,24 +1,28 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\Helpers\Helpers.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <Version>1.0</Version>
     <Authors>Vardir</Authors>
     <Company>Vardir Products</Company>
-    <Product>Boilerplate code - MVVM</Product>
-    <PackageId>BoilerplateCode.MVVM</PackageId>
+    <Product>Boilerplate code - Custom implementations</Product>
+    <PackageId>BoilerplateCode.CustomImplementations</PackageId>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <NeutralLanguage>en</NeutralLanguage>
-    <Description>A set of standard classes for MVVM-based projects</Description>
+    <Description>A set of custom implementations of common classes such as Queue (which implementation is based on linked nodes instead of array as in standard .NET Queue)</Description>
     <Copyright>Copyright ©2019 Andrew Satura</Copyright>
     <PackageLicenseUrl>MIT</PackageLicenseUrl>
     <PackageIconUrl>Icon URL</PackageIconUrl> 
     <RepositoryUrl>https://github.com/Vardir/BoilerplateCode</RepositoryUrl> 
     <RepositoryType>Git</RepositoryType> 
-    <PackageTags>boilerplate mvvm</PackageTags> 
-    <PackageReleaseNotes>Base classes for MVVM-based projects</PackageReleaseNotes>
+    <PackageTags>boilerplate custom implementations</PackageTags> 
+    <PackageReleaseNotes>Different implementations of commonly used structures</PackageReleaseNotes>
 
-    <RootNamespace>BPCode.MVVM</RootNamespace>
+    <RootNamespace>BPCode.CustomImpl</RootNamespace>
 
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>

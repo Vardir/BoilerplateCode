@@ -5,9 +5,9 @@ namespace BPCode.Helpers
     [Flags]
     public enum RangeFlags
     {
-        None,
-        LeftInclusive = 1,
+        None           = 0,
+        LeftInclusive  = 1,
         RightInclusive = 2,
-        BothInclusive = LeftInclusive | RightInclusive
+        BothInclusive  = LeftInclusive | RightInclusive
     }
 }
