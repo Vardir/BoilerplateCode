@@ -7,15 +7,19 @@
 #Projects
 MVVM/bin/
 MVVM/obj/
+MVVM/publish/
 
 Helpers/bin/
 Helpers/obj/
+Helpers/publish/
 
 Converters/bin/
 Converters/obj/
+Converters/publish/
 
 CustomStructures/bin/
 CustomStructures/obj/
+CustomStructures/publish/
 
 Testing/bin/
 Testing/obj/

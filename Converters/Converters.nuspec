@@ -4,14 +4,22 @@
     <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
+
     <authors>Andrew Satura</authors>
     <owners>$author$</owners>
-    <licenseUrl>https://github.com/Vardir/BoilerplateCode/blob/master/LICENSE</licenseUrl>
+
+    <license type="file">LICENSE.md</license>
     <projectUrl>https://github.com/Vardir/BoilerplateCode</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    
     <description>$description$</description>
+    
     <releaseNotes></releaseNotes>
     <copyright>Copyright 2019 @ Andrew Satura</copyright>
     <tags>boilerplate converters</tags>
   </metadata>
+
+  <files>
+      <file src="..\LICENSE.md" target="" />
+  </files>
 </package>
