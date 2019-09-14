@@ -2,6 +2,7 @@
 #Editors special folders
 .vscode/
 .vs/
+#Editors special folders
 
 #Projects
 MVVM/bin/
@@ -15,3 +16,7 @@ Converters/obj/
 
 CustomStructures/bin/
 CustomStructures/obj/
+
+Testing/bin/
+Testing/obj/
+#Projects

@@ -5,7 +5,7 @@ using System.Linq;
 
 using BPCode.Helpers;
 
-namespace BPCode.CustomImpl
+namespace BPCode.CustomImpl.Collections
 {
     public class Queue<T> : IEnumerable<T>, IEnumerable
     {
