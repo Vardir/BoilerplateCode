@@ -15,8 +15,8 @@
     <NeutralLanguage>en</NeutralLanguage>
     <Description>A set of custom implementations of common classes such as Queue (which implementation is based on linked nodes instead of array as in standard .NET Queue)</Description>
     <Copyright>Copyright ©2019 Andrew Satura</Copyright>
-    <PackageLicenseUrl>MIT</PackageLicenseUrl>
-    <PackageIconUrl>Icon URL</PackageIconUrl> 
+    <PackageLicenseUrl>https://github.com/Vardir/BoilerplateCode/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl></PackageIconUrl> 
     <RepositoryUrl>https://github.com/Vardir/BoilerplateCode</RepositoryUrl> 
     <RepositoryType>Git</RepositoryType> 
     <PackageTags>boilerplate custom implementations</PackageTags> 

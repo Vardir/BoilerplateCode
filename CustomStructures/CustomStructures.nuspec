@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Andrew Satura</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/Vardir/BoilerplateCode/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Vardir/BoilerplateCode</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Different implementations of commonly used structures</releaseNotes>
+    <copyright>Copyright 2019 @ Andrew Satura</copyright>
+    <tags>boilerplate custom implementations</tags>
+
+    <dependencies>
+        <dependency id="BoilerplateCode.Helpers" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>
