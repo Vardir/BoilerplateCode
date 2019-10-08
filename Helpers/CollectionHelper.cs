@@ -31,6 +31,75 @@ namespace Vardirsoft.Shared.Helpers
             return false;
         }
 
+        public static bool AnyNotIn<T>(this IEnumerable<T> collection, IEnumerable<T> another)
+            where T: IComparable<T>
+        {
+            if (another == null)
+                throw new ArgumentNullException(nameof(another));
+
+            var found = false;
+            foreach (var item in collection)
+            {
+                foreach (var item2 in another)
+                {
+                    if (item.CompareTo(item2) == 0)
+                    {    
+                        found = true;
+                    }
+                }
+            }
+
+            return !found;
+        }
+        public static bool AnyNotIn<T, Y>(this IEnumerable<T> collection, Func<T, Y> extractor, IEnumerable<Y> another)
+            where Y : IComparable<Y>
+        {
+            if (another == null)
+                throw new ArgumentNullException(nameof(another));
+
+            if (extractor == null)
+                throw new ArgumentNullException(nameof(extractor));
+
+            var found = false;
+            foreach (var item in collection)
+            {
+                foreach (var item2 in another)
+                {
+                    var extracted = extractor(item);
+                    if (extracted.CompareTo(item2) == 0)
+                    {    
+                        found = true;
+                    }
+                }
+            }
+            
+            return !found;
+        }
+        public static bool AnyNotIn<T, Y>(this IEnumerable<T> collection, IEnumerable<Y> another, Func<Y, T> extractor)
+            where T : IComparable<T>
+        {
+            if (another == null)
+                throw new ArgumentNullException(nameof(another));
+
+            if (extractor == null)
+                throw new ArgumentNullException(nameof(extractor));
+
+            var found = false;
+            foreach (var item in collection)
+            {
+                foreach (var item2 in another)
+                {
+                    var extracted = extractor(item2);
+                    if (extracted.CompareTo(item) == 0)
+                    {    
+                        found = true;
+                    }
+                }
+            }
+
+            return !found;
+        }
+
         public static int IndexWith<T>(this IEnumerable<T> collection, Func<T, bool> predicate)
         {
             if (collection == null)
@@ -75,7 +144,7 @@ namespace Vardirsoft.Shared.Helpers
             return last;
         }
         
-        public static void ForEach<T>(this IEnumerable<T> collection, Action<int, T> action)
+        public static void ForEach<T>(this IEnumerable<T> collection, Action<T> action)
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
@@ -83,10 +152,9 @@ namespace Vardirsoft.Shared.Helpers
             if (action == null)
                 throw new ArgumentNullException(nameof(action));
 
-            var i = 0;
             foreach (var item in collection)
             {
-                action(i++, item);
+                action(item);
             }
         }
         public static void ForEachI<T>(this IEnumerable<T> collection, Action<int, T> action)
@@ -153,6 +221,23 @@ namespace Vardirsoft.Shared.Helpers
             }
         }
 
+        public static void Remove<T>(this IList<T> list, Func<T, bool> predicate)
+        {
+            if (list == null)
+                throw new ArgumentNullException(nameof(list));
+
+            if (predicate == null)
+                throw new ArgumentNullException(nameof(predicate));
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (predicate(list[i]))
+                {
+                    list.RemoveAt(i);
+                    break;
+                }
+            }
+        }
         public static void Remove<T>(this LinkedList<T> list, Func<T, bool> predicate)
         {
             if (list == null)

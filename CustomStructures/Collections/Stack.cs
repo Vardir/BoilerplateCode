@@ -1,7 +1,7 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 
 using Vardirsoft.Shared.Helpers;
 
@@ -61,6 +61,12 @@ namespace Vardirsoft.Shared.CustomImpl.Collections
                 RiseStackIsEmpty();
 
             return lastNode.Value;
+        }
+
+        public void Clear()
+        {
+            Length = 0;
+            lastNode.Next = null;
         }
 
         #region IEnumerable implementation
