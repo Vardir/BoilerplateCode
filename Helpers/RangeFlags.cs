@@ -1,6 +1,6 @@
 using System;
 
-namespace BPCode.Helpers
+namespace Vardirsoft.Shared.Helpers
 {
     [Flags]
     public enum RangeFlags

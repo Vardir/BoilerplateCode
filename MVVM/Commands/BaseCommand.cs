@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Input;
 
-namespace BPCode.MVVM
+namespace Vardirsoft.Shared.MVVM
 {
     public abstract class BaseCommand : ICommand
     {

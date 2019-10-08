@@ -25,7 +25,7 @@
     <PackageTags>boilerplate testing</PackageTags> 
     <PackageReleaseNotes>Console app to test projects in the solution</PackageReleaseNotes>
 
-    <RootNamespace>BPCode.Testing</RootNamespace>
+    <RootNamespace>Vardirsoft.Shared.Testing</RootNamespace>
 
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>

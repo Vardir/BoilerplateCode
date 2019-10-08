@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>1.0</Version>
+    <Version>1.1.0</Version>
     <Authors>Vardir</Authors>
     <Company>Vardir Products</Company>
     <Product>Boilerplate code - MVVM</Product>
     <PackageId>BoilerplateCode.MVVM</PackageId>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
     <NeutralLanguage>en</NeutralLanguage>
     <Description>A set of standard classes for MVVM-based projects</Description>
     <Copyright>Copyright ©2019 Andrew Satura</Copyright>
@@ -18,7 +18,7 @@
     <PackageTags>boilerplate mvvm</PackageTags> 
     <PackageReleaseNotes>Base classes for MVVM-based projects</PackageReleaseNotes>
 
-    <RootNamespace>BPCode.MVVM</RootNamespace>
+    <RootNamespace>Vardirsoft.Shared.MVVM</RootNamespace>
 
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>

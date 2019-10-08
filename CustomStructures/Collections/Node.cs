@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BPCode.CustomImpl
+namespace Vardirsoft.Shared.CustomImpl.Collections
 {
     internal class Node<Y>
     {

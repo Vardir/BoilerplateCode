@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-namespace BPCode.MVVM
+namespace Vardirsoft.Shared.MVVM
 {
     [Serializable]
     public abstract class BaseViewModel : INotifyPropertyChanged

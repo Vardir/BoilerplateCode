@@ -1,8 +1,8 @@
 ﻿using System;
 
-using BPCode.CustomStructures.EvaluationTree;
+using Vardirsoft.Shared.CustomStructures.EvaluationTree;
 
-namespace BPCode.Testing
+namespace Vardirsoft.Shared.Testing
 {
     class Program
     {

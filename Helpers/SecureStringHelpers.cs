@@ -3,7 +3,7 @@ using System.Security;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
 
-namespace QP.Kernel.Helpers
+namespace Vardirsoft.Shared.Helpers
 {
     public static class SecureStringHelpers
     {
@@ -13,7 +13,7 @@ namespace QP.Kernel.Helpers
                 throw new ArgumentNullException(nameof(s1));
 
             if (s2 == null)
-             throw new ArgumentNullException(nameof(s2));
+                throw new ArgumentNullException(nameof(s2));
 
             if (s1.Length != s2.Length)
                 return false;

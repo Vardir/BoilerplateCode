@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-using BPCode.Helpers;
+using Vardirsoft.Shared.Helpers;
 
-namespace BPCode.CustomImpl.Collections
+namespace Vardirsoft.Shared.CustomImpl.Collections
 {
     public class Queue<T> : IEnumerable<T>, IEnumerable
     {

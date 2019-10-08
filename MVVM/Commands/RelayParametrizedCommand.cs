@@ -1,6 +1,6 @@
 using System;
 
-namespace BPCode.MVVM
+namespace Vardirsoft.Shared.MVVM
 {
     public class RelayParametrizedCommand : BaseCommand
     {
