@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace Vardirsoft.Shared.Helpers
 {
@@ -9,15 +10,7 @@ namespace Vardirsoft.Shared.Helpers
         {
             var attributes = type.GetCustomAttributes(true);
 
-            for (int i = 0; i < attributes.Length; i++)
-            {
-                var attribute = attributes[i] as Attribute;
-
-                if (attribute is T)
-                    return true;
-            }
-
-            return false;
+            return Enumerable.Select(attributes, t => t as Attribute).OfType<T>().Any();
         }
     }
 }

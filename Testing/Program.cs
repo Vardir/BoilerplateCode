@@ -1,7 +1,5 @@
 ﻿using System;
 
-using Vardirsoft.Shared.CustomStructures.EvaluationTree;
-
 namespace Vardirsoft.Shared.Testing
 {
     class Program

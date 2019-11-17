@@ -67,9 +67,9 @@ namespace Vardirsoft.Shared.Helpers
         {
             var result = new SecureString();
 
-            for (int i = 0; i < self.Length; i++)
+            foreach (var c in self)
             {
-                result.AppendChar(self[i]);
+                result.AppendChar(c);
             }
             
             return result;

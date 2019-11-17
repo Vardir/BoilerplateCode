@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <Authors>Vardir</Authors>
     <Company>Vardir Products</Company>
     <Product>Boilerplate code - Helpers</Product>
     <PackageId>BoilerplateCode.Helpers</PackageId>
-    <AssemblyVersion>1.1.1.0</AssemblyVersion>
-    <FileVersion>1.1.1.0</FileVersion>
+    <AssemblyVersion>1.1.2.5</AssemblyVersion>
+    <FileVersion>1.1.2.5</FileVersion>
     <NeutralLanguage>en</NeutralLanguage>
     <Description>A set of standard classes with useful helpers for commonly used data types such as collection helpers, string helpers etc.</Description>
     <Copyright>Copyright ©2019 Andrew Satura</Copyright>

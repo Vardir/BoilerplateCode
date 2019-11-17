@@ -10,7 +10,7 @@ namespace Vardirsoft.Shared.Helpers
 
             var array = new char[count];
             var start = c;
-            for (int i = 0; i < count; i++)
+            for (var i = 0; i < count; i++)
             {
                 array[i] = (char)(start + i);
             }

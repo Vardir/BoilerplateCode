@@ -9,7 +9,7 @@ namespace Vardirsoft.Shared.CustomImpl.Collections
 {
     public class Stack<T> : IEnumerable<T>, IEnumerable
     {
-        private Node<T> lastNode;
+        private Node<T> _lastNode;
 
         public int Length { get; private set; }
 
@@ -17,14 +17,14 @@ namespace Vardirsoft.Shared.CustomImpl.Collections
         {
             var node = new Node<T>(value);
 
-            if (lastNode == null)
+            if (_lastNode == null)
             {
-                lastNode = node;
+                _lastNode = node;
             }
             else
             {
-                node.Next = lastNode;
-                lastNode = node;
+                node.Next = _lastNode;
+                _lastNode = node;
             }
 
             Length++;
@@ -35,8 +35,8 @@ namespace Vardirsoft.Shared.CustomImpl.Collections
             if (Length == 0)
                 RiseStackIsEmpty();
 
-            var node = lastNode;
-            lastNode = node.Next;
+            var node = _lastNode;
+            _lastNode = node.Next;
             node.Next = null;
             Length--;
 
@@ -50,7 +50,7 @@ namespace Vardirsoft.Shared.CustomImpl.Collections
             if (Length == 0)
                 return false;
 
-            value = lastNode.Value;
+            value = _lastNode.Value;
 
             return true;
         }
@@ -60,20 +60,20 @@ namespace Vardirsoft.Shared.CustomImpl.Collections
             if (Length == 0)
                 RiseStackIsEmpty();
 
-            return lastNode.Value;
+            return _lastNode.Value;
         }
 
         public void Clear()
         {
             Length = 0;
-            lastNode.Next = null;
+            _lastNode.Next = null;
         }
 
         #region IEnumerable implementation
 
         public IEnumerator<T> GetEnumerator()
         {
-            var node = lastNode;
+            var node = _lastNode;
 
             while (node != null)
             {
@@ -91,7 +91,7 @@ namespace Vardirsoft.Shared.CustomImpl.Collections
         {
             var array = new T[Length];
 
-            var node = lastNode;
+            var node = _lastNode;
             for (var i = 0; i < Length; i++)
             {
                 array[i] = node.Value;
@@ -104,7 +104,7 @@ namespace Vardirsoft.Shared.CustomImpl.Collections
         public override bool Equals(object obj)
         {
             return obj is Stack<T> stack && Length == stack.Length &&
-                   (Length == 0 ? true : (lastNode?.Equals(stack.lastNode) ?? false) &&
+                   (Length == 0 ? true : (_lastNode?.Equals(stack._lastNode) ?? false) &&
                                          this.Skip(1).SequenceEqual(stack.Skip(1)));
         }
 

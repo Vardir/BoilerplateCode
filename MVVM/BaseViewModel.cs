@@ -11,12 +11,15 @@ namespace Vardirsoft.Shared.MVVM
         public event PropertyChangedEventHandler PropertyChanged;        
 
         public BaseViewModel() { }
+        
+        protected virtual void RefreshCommands() { }
 
         protected void ForceSetWithNotify<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
         {
             field = value;
             NotifyPropertyChanged(propertyName);
         }
+        
         protected void SetWithNotify<T>(ref T field, T value, bool disallowNull = true, [CallerMemberName] string propertyName = null)
             where T: class
         {
@@ -25,10 +28,12 @@ namespace Vardirsoft.Shared.MVVM
             
             ForceSetWithNotify(ref field, value, propertyName);
         }
+        
         protected void SetWithNotify<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
         {
             SetWithNotify(ref field, value, Comparer<T>.Default, propertyName);
         }
+        
         protected void SetWithNotify<T>(ref T field, T value, IComparer<T> comparer, [CallerMemberName] string propertyName = null)
         {
             if (comparer.Compare(field, value) != 0)

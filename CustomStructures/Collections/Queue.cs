@@ -9,8 +9,8 @@ namespace Vardirsoft.Shared.CustomImpl.Collections
 {
     public class Queue<T> : IEnumerable<T>, IEnumerable
     {
-        private Node<T> firstNode;
-        private Node<T> lastNode;
+        private Node<T> _firstNode;
+        private Node<T> _lastNode;
 
         public int Length { get; private set; }
 
@@ -18,15 +18,15 @@ namespace Vardirsoft.Shared.CustomImpl.Collections
         {
             var node = new Node<T>(value);
 
-            if (firstNode == null)
+            if (_firstNode == null)
             {
-                firstNode = node;
-                lastNode = node;
+                _firstNode = node;
+                _lastNode = node;
             }
             else
             {
-                lastNode.Previous = node;
-                lastNode = node;
+                _lastNode.Previous = node;
+                _lastNode = node;
             }
 
             Length++;
@@ -37,9 +37,9 @@ namespace Vardirsoft.Shared.CustomImpl.Collections
             if (Length == 0)
                 RiseQueueIsEmpty();
 
-            var node = firstNode;
+            var node = _firstNode;
 
-            firstNode = node.Previous;
+            _firstNode = node.Previous;
             node.Previous = null;
             Length--;
 
@@ -63,23 +63,23 @@ namespace Vardirsoft.Shared.CustomImpl.Collections
             if (Length == 0)
                 RiseQueueIsEmpty();
 
-            return firstNode.Value;
+            return _firstNode.Value;
         }
 
         public void Clear()
         {
             Length = 0;
-            firstNode.Next = null;
-            lastNode.Previous = null;
-            firstNode = null;
-            lastNode = null;
+            _firstNode.Next = null;
+            _lastNode.Previous = null;
+            _firstNode = null;
+            _lastNode = null;
         }
 
         #region IEnumerable implementation
 
         public IEnumerator<T> GetEnumerator()
         {
-            var node = firstNode;
+            var node = _firstNode;
 
             while (node != null)
             {
@@ -97,7 +97,7 @@ namespace Vardirsoft.Shared.CustomImpl.Collections
         {
             var array = new T[Length];
 
-            var node = firstNode;
+            var node = _firstNode;
             for (var i = 0; i < Length; i++)
             {
                 array[i] = node.Value;
@@ -110,8 +110,8 @@ namespace Vardirsoft.Shared.CustomImpl.Collections
         public override bool Equals(object obj)
         {
             return obj is Queue<T> queue && Length == queue.Length &&
-                   (Length == 0 ? true : (firstNode?.Equals(queue.firstNode) ?? false) &&
-                                         (lastNode?.Equals(queue.lastNode) ?? false) &&
+                   (Length == 0 ? true : (_firstNode?.Equals(queue._firstNode) ?? false) &&
+                                         (_lastNode?.Equals(queue._lastNode) ?? false) &&
                                          this.Skip(1).SequenceEqual(queue.Skip(1)));
         }
 

@@ -10,9 +10,7 @@ namespace Vardirsoft.Shared.Helpers
             var normalizedPath = path.Replace('/', '\\');
             var lastSlashIndex = normalizedPath.LastIndexOf('\\');
 
-            if (lastSlashIndex <= 0) return path;
-
-            return path.Substring(lastSlashIndex + 1);
+            return lastSlashIndex <= 0 ? path : path.Substring(lastSlashIndex + 1);
         }
     }
 }

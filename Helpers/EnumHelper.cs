@@ -20,13 +20,13 @@ namespace Vardirsoft.Shared.Helpers
             var names = Enum.GetNames(type);
             var compareTo = value.ToLower();
 
-            for (int i = 0; i < names.Length; i++)
+            foreach (var x in names)
             {
-                var name = names[i].ToLower();
+                var name = x.ToLower();
 
                 if (name == compareTo)
                 {
-                    Enum.TryParse(names[i], out key);
+                    Enum.TryParse(x, out key);
                     return true;
                 }
             }

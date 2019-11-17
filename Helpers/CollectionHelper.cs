@@ -229,7 +229,7 @@ namespace Vardirsoft.Shared.Helpers
             if (predicate == null)
                 throw new ArgumentNullException(nameof(predicate));
 
-            for (int i = 0; i < list.Count; i++)
+            for (var i = 0; i < list.Count; i++)
             {
                 if (predicate(list[i]))
                 {

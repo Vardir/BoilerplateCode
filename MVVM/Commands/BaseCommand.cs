@@ -13,10 +13,10 @@ namespace Vardirsoft.Shared.MVVM
         public void NotifyCanExecuteChanged() => CanExecuteChanged?.Invoke(this, new EventArgs());
         public void NotifyCanExecuteChanged(object sender, EventArgs e) => CanExecuteChanged?.Invoke(sender, e);
 
-        protected void EnsureAction(Delegate action)
+        protected static void EnsureAction(Delegate action)
         {
             if (action == null)
-                throw new ArgumentNullException("Relay command must have an action to execute");
+                throw new ArgumentNullException(nameof(action), "Relay command must have an action to execute");
         }
     }
 }

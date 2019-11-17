@@ -31,7 +31,7 @@ namespace Vardirsoft.Shared.Helpers
 
             var len = 0;
 
-            for (int i = index; i < input.Length; i++, len++)
+            for (var i = index; i < input.Length; i++, len++)
             {
                 if (input[i] == second)
                     break;
@@ -48,7 +48,7 @@ namespace Vardirsoft.Shared.Helpers
             if (start < 0 || start >= value.Length)
                 throw new IndexOutOfRangeException();
 
-            for (int i = start; i < value.Length; i++)
+            for (var i = start; i < value.Length; i++)
             {
                 if (endChars.Contains(value[i]))
                 {
